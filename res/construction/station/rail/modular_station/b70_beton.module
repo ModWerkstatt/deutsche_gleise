@@ -1,0 +1,46 @@
+local transf = require "transf"
+local vec3 = require "vec3"
+local modulesutil = require "modulesutil"
+local trainstationutil = require "modules/trainstationutil"
+
+function data()
+
+return { 
+	availability = {
+		yearFrom = 1970,
+		yearTo = 1990,
+	},
+	cost = {
+		price = 18000,
+	},
+
+	description = {
+		name = _("name_b70"),
+		description = _("desc_b70"),
+		icon = "ui/construction/station/rail/modular_station/b70_beton.tga"
+	},
+	-- buildMode = "MULTI",
+	type = "track",
+	order = {
+		value = 250,
+	},
+	metadata = {
+		track = true,
+	},
+
+	--buildMode = "MULTI",
+	
+	updateFn = function(result, transform, tag, slotId, addModuleFn, params)
+		trainstationutil.makeTrack(result, transform, tag, slotId, addModuleFn, params, 1)
+	end,
+	
+	getModelsFn = function()
+		
+		local result = {
+		}
+		
+		return result
+	end
+}
+
+end

@@ -1,0 +1,70 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 1, 1.2999999523163, 0.53000003099442, },
+		bbMin = { -1, -1.2999999523163, 0.29999998211861, },
+	},
+	collider = {
+		params = {
+			halfExtents = { 1, 1.2999999523163, 0.0, },
+		},
+		transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		type = "BOX",
+	},
+	lods = {
+		{
+			node = {
+				children = {
+					{
+						materials = { "weichenantrieb/switch.mtl", },
+						mesh = "weichenantrieb/new_switch_lod0.msh",
+						name = "Prellbock_1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.3, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 20,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "weichenantrieb/switch.mtl", },
+						mesh = "weichenantrieb/new_switch_lod1.msh",
+						name = "Prellbock_1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.3, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 20,
+			visibleTo = 250,
+		},
+		{
+			node = {
+				children = {
+					{
+						materials = { "weichenantrieb/switch.mtl", },
+						mesh = "weichenantrieb/new_switch_lod2.msh",
+						name = "Prellbock_1",
+						transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1.3, 0, 0, 1, },
+					},
+				},
+				name = "RootNode",
+				transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+			},
+			static = false,
+			visibleFrom = 250,
+			visibleTo = 800,
+		},
+	},
+	metadata = { },
+	version = 1,
+}
+end

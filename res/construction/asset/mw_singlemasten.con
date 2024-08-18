@@ -1,0 +1,70 @@
+function data()
+return { 
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Deutsches Gleisset Einzelmasten"),			
+		description = _("Deutsches Gleisset Einzelmasten.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	
+	snapping = { 
+    rail = true, 
+    road = true, 
+    water = false 
+    },
+	categories = { "tracks" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "einzelmasten_db",
+			name = _("Einzelmasten der DB"),
+			uiType = "BUTTON",
+			values = { _("DB Mast"), _("DRG 1900 Metall"), _("DRG 1900 Holz"), _("DRG 1930 Bogenmast"), _("DRG 1930 Bügelmast"), _("DRG 1934 Langmast"), _("DRG 1934 Bügelmast"),},
+			tooltip = _("Einzelmasten des deutschen Gleisset als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+		
+		if params.einzelmasten_db == 0 then
+		result.models[#result.models+1] = {id = "oberleitung/mast_2.mdl", transf = { 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, -0.0, -0.53, 1, }, }
+		end
+		
+		if params.einzelmasten_db == 1 then
+		result.models[#result.models+1] = {id = "oberleitung1900/mast1900_2.mdl", transf = { 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, -0.0, -0.53, 1, }, }
+		end
+		
+		if params.einzelmasten_db == 2 then
+		result.models[#result.models+1] = {id = "oberleitung1900/mast1900_2b.mdl", transf = { 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, -0.0, -0.53, 1, }, }
+		end
+		
+		if params.einzelmasten_db == 3 then
+		result.models[#result.models+1] = {id = "oberleitung1930/mast1930g_2.mdl", transf = { 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, -0.0, -0.53, 1, }, }
+		end
+		
+		if params.einzelmasten_db == 4 then
+		result.models[#result.models+1] = {id = "oberleitung1930/mast1930g_2b.mdl", transf = { 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, -0.0, -0.53, 1, }, }
+		end
+		
+		if params.einzelmasten_db == 5 then
+		result.models[#result.models+1] = {id = "oberleitung1934/mast1934_2.mdl", transf = { 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, -0.0, -0.53, 1, }, }
+		end
+		
+		if params.einzelmasten_db == 6 then
+		result.models[#result.models+1] = {id = "oberleitung1934/mast1934_2b.mdl", transf = { 0, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, -0.0, -0.53, 1, }, }
+		end
+		
+		
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end
