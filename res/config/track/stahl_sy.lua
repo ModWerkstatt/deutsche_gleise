@@ -5,7 +5,7 @@ function data()
 	t.desc = _("desc_sy")
 
 	t.yearFrom = 1986
-	t.yearTo = 2000
+	--t.yearTo = 2000
 
 	t.shapeWidth = 4.0
 	t.shapeStep = 4.0
